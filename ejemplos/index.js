@@ -121,4 +121,7 @@ const crearNombreCompleto = (nombre, apellido) => {
 };
 console.log("116" + name);
 
+const botonesHtml = document.getElementsByTagName('button');
+console.log(botonesHtml);
+
 crearNombreCompleto(nombre, apellido);
