@@ -99,7 +99,9 @@ function imprimirNombre(nombre) {
 // Invocar la función
 
 imprimirNombre(nombre);
-// nfn es el atajo
+
+/*
+// nfn es el atajo para una función nombrada
 const imprimirNombreApellido = (nombre, apellido) => { 
     console.log(`${nombre} ${apellido}`);   // Arrow function
 };
@@ -109,7 +111,7 @@ imprimirNombreApellido(nombre, apellido);
 (() => {
     console.log();
 });
-
+nf
 const crearNombreCompleto = (nombre, apellido) => {
     console.log("-- GLOBAL SCOPE FAKE --");
     console.log(nombre, apellido);
@@ -125,3 +127,46 @@ const botonesHtml = document.getElementsByTagName('button');
 console.log(botonesHtml);
 
 crearNombreCompleto(nombre, apellido);
+*/
+
+console.log("---- Array ----");
+let estudiantes = [];
+
+//Agregar un elemento
+// estudiantes.push(5);
+// estudiantes.push(null);
+// estudiantes.push({});
+// estudiantes.push(() => { console.log(); });
+
+estudiantes.push({ "nombre": "María", id: 123});
+estudiantes.push({ "nombre": "María", id: 12345});
+
+const imprimirEstudiante = (estudiantes) => { 
+    console.log(estudiantes) };
+
+estudiantes.forEach( imprimirEstudiante );
+console.log(estudiantes);
+
+estudiantes.forEach((x) => console.log(x.nombre));
+
+console.log("---- Búsqueda con filter ----");
+
+for (let i = 0; i < estudiantes; i++) {
+    if (estudiantes[i].nombre == "María") {
+        console.log(estudiantes[i].id);
+    };
+};
+
+
+const marias =estudiantes.filter(x => x.nombre == "María");
+marias[0].id;
+
+
+const maria = estudiantes.find(x => x.nombre == "María");
+console.log(estudiantes);
+
+
+console.log("---- MAP ----");
+
+estudiantes = estudiantes.map(x => { return { ...x, edad: null}});
+console.log(estudiantes);
