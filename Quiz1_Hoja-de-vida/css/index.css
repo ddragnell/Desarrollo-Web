@@ -1,0 +1,19 @@
+h1 {
+    color: red;
+}
+
+h3 {
+    color: blue;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.social {
+    color: blueviolet;
+    background-color: brown;
+}
