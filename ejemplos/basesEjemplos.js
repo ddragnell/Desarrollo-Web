@@ -170,3 +170,29 @@ console.log("---- MAP ----");
 
 estudiantes = estudiantes.map(x => { return { ...x, edad: null}});
 console.log(estudiantes);
+
+//JSON (javascript object notation)
+
+
+function jsonsEnJavascript(){
+    const ciudad={
+        nombre: "Medellin",
+        poblacion: 2.5,
+        barrios_count: 31,
+        calcularCantidadVehiculos(){
+            console.log("el total de vehículos es", "55M", this.nombre)
+        }
+    }
+}
+
+//Destructuracion
+
+const{nombre:nombreCiudad}=ciudad;
+console.log(nombreCiudad)
+ciudad.calcularCantidadVehiculos()
+console.log(ciudad.nombre)
+console.log(ciudad["nombre"])
+
+
+
+
